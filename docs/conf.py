@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = '_'
+project = 'Invoker'
 copyright = '2018, _'
 author = '0xaryan'
 
@@ -153,3 +153,11 @@ texinfo_documents = [
      author, '_', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "0xaryan", # Username
+    "github_repo": "Invoker", # Repo name
+    "github_version": "master", # Version
+    "conf_py_path": "/source/", # Path in the checkout to the docs root
+}
