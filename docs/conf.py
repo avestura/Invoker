@@ -8,6 +8,9 @@
 
 # -- Path setup --------------------------------------------------------------
 
+import sphinx_rtd_theme
+from recommonmark.parser import CommonMarkParser
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -20,13 +23,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Invoker'
-copyright = '2018, _'
+copyright = 'GNU GPL v3'
 author = '0xaryan'
 
 # The short X.Y version
-version = ''
+version = '0.0.1'
 # The full version, including alpha/beta/rc tags
-release = '_'
+release = 'alpha'
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,6 +42,10 @@ release = '_'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -48,7 +55,10 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+source_parsers = {
+    '.md': CommonMarkParser,
+}
 
 # The master toctree document.
 master_doc = 'index'
@@ -153,6 +163,9 @@ texinfo_documents = [
      author, '_', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_context = {
     "display_github": True, # Integrate GitHub
