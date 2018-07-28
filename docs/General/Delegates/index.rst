@@ -1,6 +1,7 @@
-Warning
+Delegates
+============
 
-Not completed.
+.. Warning:: Not completed.
 
 .. toctree::
     :maxdepth: 3
