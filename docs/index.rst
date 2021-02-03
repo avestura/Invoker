@@ -1,9 +1,9 @@
-Welcome to Inovker's documentation!
+Welcome to Invoker's documentation!
 ====================================
 
 .. toctree::
     :maxdepth: 2
-    :caption: Inovker
+    :caption: Invoker
 
     Invoker/WhatIsInvoker
 
